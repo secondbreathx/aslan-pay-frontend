@@ -94,3 +94,10 @@ npm start
 ### Run the Simulator
 During the application startup, you will be prompted to press either "i" or "a" to run the simulator. Choose the appropriate key to launch the simulator.
 
+
+### Screenshots 
+
+[HomeScreen](screenshots/homescreen.png)
+
+
+

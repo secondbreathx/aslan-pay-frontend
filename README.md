@@ -97,7 +97,10 @@ During the application startup, you will be prompted to press either "i" or "a" 
 
 ### Screenshots 
 
-[HomeScreen](screenshots/homescreen.png)
+[Home Screen](screenshots/homescreen.png)
+[Favourite Screen](screenshots/favoruitescreen.png)
+[Search Screen](screenshots/searchscreen.png)
+
 
 
 

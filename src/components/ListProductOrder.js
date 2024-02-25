@@ -14,7 +14,7 @@ const ListProductOrder = ({ products = [] }) => {
   const renderItem = ({ item }) => {
     return (
       <View style={styles.item}>
-        <Image style={styles.img} source={item.img} />
+        <Image style={styles.img} source = {{ uri: item.img }} />
         <View style={styles.itemBody}>
           <View style={styles.textHeader}>
             <Text style={styles.name}>{item.name}</Text>
@@ -23,7 +23,7 @@ const ListProductOrder = ({ products = [] }) => {
 
           <View style={styles.footer}>
             <Text style={styles.time}>
-              <Text style={styles.price}>{item.cashback}</Text>
+              <Text style={styles.price}>{item.cashback + "%"} </Text>
               <Text> cashback </Text>
             </Text>
             <View style={styles.groupAction}>

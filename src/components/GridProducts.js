@@ -27,9 +27,8 @@ const ProductItem = (props) => {
         styles.container
       ]}
     >
-      <Image
-        source={props.img}
-        style={{
+      <Image    
+          source= {{uri: props.img}} style={{
           width: ITEM_SIZE - 2 * PADDING_INNER,
           height: (ITEM_SIZE - 2 * PADDING_INNER) * (107 / 144)
         }}
@@ -39,7 +38,7 @@ const ProductItem = (props) => {
       <Text style={styles.type}>valid to {props.time} days</Text>
       <View style={styles.bottom}>
         <Text style={styles.time}>
-          <Text style={styles.price}>{props.cashback}</Text>
+          <Text style={styles.price}>{props.cashback + "%"}</Text>
           <Text> cashback </Text>
         </Text>
         <TouchableOpacity

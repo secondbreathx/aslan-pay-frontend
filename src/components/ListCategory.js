@@ -7,25 +7,23 @@ import {
 } from "react-native";
 import React from "react";
 
-const ListCategory = ({ categories = [], onChange, currentType }) => {
+const ListCategory = ({ categories = [], onChange, currentCategoryId }) => {
   return (
     <ScrollView horizontal showsHorizontalScrollIndicator={false}>
       {categories.map((category) => (
         <TouchableOpacity
-          key={category.id}
+          key={category.categoryId}
           style={[
             styles.item,
-            currentType == category.id && { backgroundColor: "#16C07B" }
+            currentCategoryId == category.categoryId && { backgroundColor: "#16C07B" }
           ]}
-          onPress={() => onChange(category.id)}
-        >
-          <Image source={category.image} />
+          onPress={() => onChange(category.categoryId)}>
+          <Image source= {{uri: category.image}}  style ={{width:20, height: 20}} />
           <Text
             style={[
               styles.name,
-              currentType == category.id && { color: "#FFFFFF" }
-            ]}
-          >
+              currentCategoryId == category.categoryId && { color: "#FFFFFF" }
+            ]}>
             {category.name}
           </Text>
         </TouchableOpacity>

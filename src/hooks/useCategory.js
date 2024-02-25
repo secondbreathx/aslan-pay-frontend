@@ -5,7 +5,7 @@ export const useCategory = () => {
 
   React.useEffect(() => {
     (async () => {
-      const resp = await fetch("/api/category");
+      const resp = await fetch("http://localhost:9090/api/category");
       const data = await resp.json();
       setCategoryList(data);
     })();

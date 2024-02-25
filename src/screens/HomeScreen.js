@@ -19,12 +19,12 @@ import { useNavigation } from "@react-navigation/native";
 const HomeScreen = () => {
   const [products, isLoading, fetchProducts] = useProduct();
   const categoryList = useCategory();
-  const [type, setType] = React.useState(1);
+  const [categoryId, setCategoryId] = React.useState(1);
   const navigation = useNavigation();
 
   React.useEffect(() => {
-    fetchProducts(type);
-  }, [type, fetchProducts]);
+    fetchProducts(categoryId);
+  }, [categoryId, fetchProducts]);
 
   return (
     <SafeAreaView style={styles.container}>
@@ -41,8 +41,8 @@ const HomeScreen = () => {
         {categoryList.length > 0 && (
           <ListCategory
             categories={categoryList}
-            onChange={setType}
-            currentType={type}
+            onChange={setCategoryId}
+            currentCategoryId={categoryId}
           />
         )}
         {isLoading ? (

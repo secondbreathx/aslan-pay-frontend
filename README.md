@@ -94,11 +94,18 @@ npm start
 ### Run the Simulator
 During the application startup, you will be prompted to press either "i" or "a" to run the simulator. Choose the appropriate key to launch the simulator.
 
+### Notes 
+
+- Created AWS S3 Bucket to retrieve image files 
+- [AWS S3 Bucket](screenshots/aslanpay-aws-S3-images.png)
+
 
 ### Screenshots 
 
 [Home Screen](screenshots/homescreen.png)
+
 [Favourite Screen](screenshots/favoruitescreen.png)
+
 [Search Screen](screenshots/searchscreen.png)
 
 

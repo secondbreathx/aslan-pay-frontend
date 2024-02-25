@@ -7,7 +7,7 @@ if (window.server) {
 // update backend
 window.server = createServer({
   routes() {
-    this.get("http://localhost:9090/api/merchant", (schema, req) => {
+    this.get("http://localhost:9090/api/merchant/0?searchTerm=", (schema, req) => {
 
       return listProducts.map((item) => ({
           ...item,

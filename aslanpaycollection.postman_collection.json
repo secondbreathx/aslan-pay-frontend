@@ -1,0 +1,134 @@
+{
+	"info": {
+		"_postman_id": "28ee9e5b-1520-4a0e-bb93-e3cc8a988762",
+		"name": "aslanpaycollection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add Product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " [\n    {\n      \"categoryId\": 1,\n      \"name\" : \"Starbucks\",\n      \"cashback\": 9.83,\n      \"time\": 10,\n      \"link\": \"https://www.aliexpress.com/\",\n      \"img\": \"https://aslanpay.s3.eu-west-1.amazonaws.com/starbucks.jpg\"\n  \n    },\n    {\n      \"categoryId\": 1,\n      \"name\": \"Costa\",\n      \"cashback\": 6.55,\n      \"time\": 7,\n      \"link\": \"https://www.aliexpress.com/\",\n      \"img\": \"https://aslanpay.s3.eu-west-1.amazonaws.com/costa.jpg\"\n    },\n    {\n      \"categoryId\": 1,\n      \"name\": \"Pret Manager\",\n      \"cashback\": 9.83,\n      \"waitTime\": 10,\n      \"link\": \"https://www.aliexpress.com/\",\n      \"img\": \"https://aslanpay.s3.eu-west-1.amazonaws.com/pret.jpg\"\n    },\n    {\n      \"categoryId\": 2,\n      \"name\": \"Zara\",\n      \"cashback\": 4,\n      \"time\": 23,\n      \"link\": \"https://www.aliexpress.com/\",\n      \"img\": \"https://aslanpay.s3.eu-west-1.amazonaws.com/zara.jpg\"\n    },\n    {\n      \"categoryId\": 2,\n      \"name\": \"Tommy Hilfiger\",\n      \"cashback\": 6.55,\n      \"time\": 14,\n      \"link\": \"https://www.aliexpress.com/\",\n      \"img\": \"https://aslanpay.s3.eu-west-1.amazonaws.com/tommy.jpg\"\n    },\n    {\n      \"categoryId\": 3,\n      \"name\": \"Nvidia\",\n      \"cashback\": 6.55,\n      \"time\": 14,\n      \"link\": \"https://www.aliexpress.com/\",\n      \"img\" :\"https://aslanpay.s3.eu-west-1.amazonaws.com/nvidia.jpg\"\n    },\n    {\n      \"categoryId\": 3,\n      \"name\": \"Apple\",\n      \"cashback\": 6.55,\n      \"time\": 14,\n      \"link\": \"https://www.aliexpress.com/\",\n      \"img\": \"https://aslanpay.s3.eu-west-1.amazonaws.com/apple.jpg\"\n    }\n  ]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/api/merchant",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"merchant"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Category",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n      \"categoryId\": 1,\n      \"name\": \"Coffee\",\n      \"image\": \"https://aslanpay.s3.eu-west-1.amazonaws.com/coffee-cup.png\"\n    },\n    {\n      \"categoryId\": 2,\n      \"name\": \"Clothes\",\n      \"image\": \"https://aslanpay.s3.eu-west-1.amazonaws.com/laundry.png\"\n    },\n    {\n      \"categoryId\": 3,\n      \"name\": \"Technology\",\n      \"image\": \"https://aslanpay.s3.eu-west-1.amazonaws.com/technology.png\"\n    }\n  ]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/api/category",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"category"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch Products By Params",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/api/merchant/0?searchTerm=",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"merchant",
+						"0"
+					],
+					"query": [
+						{
+							"key": "searchTerm",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch Category",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/api/category",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"category"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

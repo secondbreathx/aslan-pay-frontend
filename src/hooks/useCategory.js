@@ -1,4 +1,5 @@
 import React from "react";
+import Config from 'react-native-config';
 
 export const useCategory = () => {
   const [categoryList, setCategoryList] = React.useState([]);

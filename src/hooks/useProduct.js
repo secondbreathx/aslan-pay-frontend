@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Config from 'react-native-config';
 
 export const useProduct = () => {
   const [listProducts, setListProducts] = useState([]);
